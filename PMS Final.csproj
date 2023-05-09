@@ -106,11 +106,5 @@
   <ItemGroup>
     <None Include="Resources\bigger green button.png" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PMSLibrary\PMSLibrary.csproj">
-      <Project>{ec2daea9-06e5-4eab-932d-c0dd59a2ddfb}</Project>
-      <Name>PMSLibrary</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

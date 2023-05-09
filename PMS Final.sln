@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMS Final", "PMS Final.csproj", "{E18466BE-6D50-4D0D-BB39-1729C3ECCE3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMSLibrary", "..\PMSLibrary\PMSLibrary.csproj", "{EC2DAEA9-06E5-4EAB-932D-C0DD59A2DDFB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMSLibrary", "PMSLibrary\PMSLibrary.csproj", "{EC2DAEA9-06E5-4EAB-932D-C0DD59A2DDFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
