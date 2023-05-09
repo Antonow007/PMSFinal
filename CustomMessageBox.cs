@@ -1,16 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Dynamic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Krypton.Toolkit;
+using System;
 using System.Windows.Forms;
-using Krypton.Toolkit;
-using PMSLibrary;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PMS_Final
 {
@@ -31,7 +21,7 @@ namespace PMS_Final
 
         private void nextButton_Click(object sender, EventArgs e)
         {
-             this.DialogResult = DialogResult.OK;
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

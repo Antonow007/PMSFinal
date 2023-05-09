@@ -1,12 +1,7 @@
 ﻿using PMSLibrary;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PMSFinal
@@ -49,7 +44,7 @@ namespace PMSFinal
             instance = null;
         }
 
-        
+
 
         public void IsertIntoDatabase(CarInfo info)
         {
@@ -91,7 +86,7 @@ namespace PMSFinal
 
             }
 
-           
+
 
         }
 
@@ -106,7 +101,7 @@ namespace PMSFinal
             return table;
         }
 
-        public void UpdateParkingStatus() 
+        public void UpdateParkingStatus()
         {
 
 

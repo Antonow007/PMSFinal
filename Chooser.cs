@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Dynamic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Krypton.Toolkit;
+﻿using Krypton.Toolkit;
 using PMSFinal;
 using PMSLibrary;
+using System;
+using System.Data;
+using System.Windows.Forms;
 
 namespace PMS_Final
 {
@@ -40,7 +32,7 @@ namespace PMS_Final
 
 
 
-       
+
 
 
 
@@ -70,7 +62,7 @@ namespace PMS_Final
 
         private void Chooser_Load(object sender, EventArgs e)
         {
-           
+
             DbManager dm = new DbManager();
             DataTable table = dm.DataBasetoComboBox();
 
