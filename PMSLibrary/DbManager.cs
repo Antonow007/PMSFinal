@@ -32,7 +32,7 @@ namespace PMSFinal
         public DbManager()
         {
             try
-            {
+            {              
                 connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\anton\\source\\repos\\PMS Final\\Parking.mdf\";Integrated Security=True;Connect Timeout=30";
                 connection = new SqlConnection(connectionString);
                 connection.Open();
@@ -70,7 +70,7 @@ namespace PMSFinal
             }
             finally
             {
-                Dispose();
+                
             }
 
             SqlCommand cmd1 = new SqlCommand("INSERT INTO Car_Type (brand_name,model_name) VALUES (@Brand,@Model)", connection);
@@ -88,7 +88,7 @@ namespace PMSFinal
             }
             finally
             {
-                Dispose();
+              
             }
 
             SqlCommand cmd2 = new SqlCommand("INSERT INTO Customer (name_,phone,email) VALUES (@Name,@Phone,@Email)", connection);
@@ -109,7 +109,7 @@ namespace PMSFinal
             }
             finally
             {
-                Dispose();
+               
             }
 
 
