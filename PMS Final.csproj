@@ -59,6 +59,12 @@
     <Compile Include="Chooser.Designer.cs">
       <DependentUpon>Chooser.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomMessageBox.Designer.cs">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Register.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Chooser.resx">
       <DependentUpon>Chooser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomMessageBox.resx">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
@@ -105,6 +114,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bigger green button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transparent Button.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="PMSLibrary\PMSLibrary.csproj">

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Krypton.Toolkit;
 using PMSLibrary;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PMS_Final
 {
@@ -20,7 +21,7 @@ namespace PMS_Final
             InitializeComponent();
         }
 
-       
+
 
 
 
@@ -95,10 +96,24 @@ namespace PMS_Final
             }
         }
 
-       
+
+
 
         private void nextButton_Click_1(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(plateTextBox.Text) ||
+        string.IsNullOrWhiteSpace(brandTextBox.Text) ||
+        string.IsNullOrWhiteSpace(modelTextBox.Text) ||
+        string.IsNullOrWhiteSpace(colorTextBox.Text) ||
+        string.IsNullOrWhiteSpace(nameTextBox.Text) ||
+        string.IsNullOrWhiteSpace(phoneTextBox.Text) ||
+        string.IsNullOrWhiteSpace(emailTextBox.Text))
+            {
+                CustomMessageBox.Show("Please fill all fields.", "Error");
+                return;
+            }
+
+
             CarInfo info = new CarInfo();
             info.License = plateTextBox.Text;
             info.Brand = brandTextBox.Text;
@@ -113,5 +128,23 @@ namespace PMS_Final
             this.WindowState = FormWindowState.Minimized;
             this.Hide();
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

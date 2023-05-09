@@ -86,22 +86,5 @@ namespace PMS_Final
 
             dm.Dispose();
         }
-
-
-
-        protected override void OnFormClosing(FormClosingEventArgs e)
-        {
-            base.OnFormClosing(e);
-            if (e.CloseReason == CloseReason.UserClosing)
-            {
-                this.Dispose();
-            }
-        }
-
-
-
-
-
-
     }
 }

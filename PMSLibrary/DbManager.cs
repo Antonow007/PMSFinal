@@ -32,7 +32,7 @@ namespace PMSFinal
         public DbManager()
         {
             try
-            {              
+            {
                 connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\anton\\source\\repos\\PMS Final\\Parking.mdf\";Integrated Security=True;Connect Timeout=30";
                 connection = new SqlConnection(connectionString);
                 connection.Open();
@@ -49,29 +49,10 @@ namespace PMSFinal
             instance = null;
         }
 
-
+        
 
         public void IsertIntoDatabase(CarInfo info)
         {
-
-
-            SqlCommand cmd = new SqlCommand("INSERT INTO Car (license_plate,color) VALUES (@Plate,@Color)", connection);
-
-            cmd.Parameters.AddWithValue("@Plate", info.License);
-            cmd.Parameters.AddWithValue("@Color", info.Color);
-            try
-            {
-
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                
-            }
 
             SqlCommand cmd1 = new SqlCommand("INSERT INTO Car_Type (brand_name,model_name) VALUES (@Brand,@Model)", connection);
 
@@ -88,7 +69,7 @@ namespace PMSFinal
             }
             finally
             {
-              
+
             }
 
             SqlCommand cmd2 = new SqlCommand("INSERT INTO Customer (name_,phone,email) VALUES (@Name,@Phone,@Email)", connection);
@@ -96,8 +77,6 @@ namespace PMSFinal
             cmd2.Parameters.AddWithValue("@Name", info.Name);
             cmd2.Parameters.AddWithValue("@Phone", info.Phone);
             cmd2.Parameters.AddWithValue("@Email", info.Email);
-
-
             try
             {
 
@@ -109,8 +88,10 @@ namespace PMSFinal
             }
             finally
             {
-               
+
             }
+
+           
 
         }
 
