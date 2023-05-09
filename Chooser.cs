@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Dynamic;
 using System.Linq;
@@ -69,6 +70,7 @@ namespace PMS_Final
 
         private void Chooser_Load(object sender, EventArgs e)
         {
+           
             DbManager dm = new DbManager();
             DataTable table = dm.DataBasetoComboBox();
 
@@ -77,6 +79,8 @@ namespace PMS_Final
             ParkingNames.DisplayMember = "name_";
             ParkingNames.ValueMember = "id";
             dm.Dispose();
+
+
         }
 
         private void addButton_Click_1(object sender, EventArgs e)

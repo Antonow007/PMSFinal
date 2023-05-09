@@ -106,7 +106,20 @@ namespace PMSFinal
             return table;
         }
 
+        public void UpdateParkingStatus() 
+        {
 
+
+
+            SqlCommand cmd2 = new SqlCommand("UPDATE Parking SET status_ = 't' WHERE name_ = @ParkingName", connection);
+
+            cmd2.Parameters.AddWithValue("@ParkingName", ParkingNames.SelectedText);
+
+
+
+
+
+        }
 
 
 
