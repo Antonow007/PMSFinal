@@ -56,6 +56,7 @@ namespace PMSFinal
             try
             {
 
+                
                 cmd1.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -85,15 +86,21 @@ namespace PMSFinal
             {
 
             }
-            SqlCommand cmd3 = new SqlCommand("INSERT INTO Car (color,license_plate) VALUES (" +
-                ",@Plate)", connection);
-
-            cmd3.Parameters.AddWithValue("Color", info.Color);
+            SqlCommand cmd3 = new SqlCommand("INSERT INTO Car (id_customer,license_plate,brand,color) VALUES (" +
+                "(SELECT id FROM customer WHERE name_=@Name AND phone=@Phone AND email=@Email)," +
+                "@Plate,(SELECT id FROM Car_Type WHERE brand_name=@Brand AND model_name=@Model),@Color)", connection);
+            cmd3.Parameters.AddWithValue("@Name", info.Name);
+            cmd3.Parameters.AddWithValue("@Phone", info.Phone);
+            cmd3.Parameters.AddWithValue("@Email", info.Email);
             cmd3.Parameters.AddWithValue("@Plate", info.License);
+            cmd3.Parameters.AddWithValue("@Brand", info.Brand);
+            cmd3.Parameters.AddWithValue("@Model", info.Model);
+            cmd3.Parameters.AddWithValue("Color", info.Color);
+            
             try
             {
 
-                cmd2.ExecuteNonQuery();
+                cmd3.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
@@ -118,14 +125,14 @@ namespace PMSFinal
             return table;
         }
 
-        public void UpdateParkingStatus(string name)
+        public void UpdateParkingStatus()
         {
 
 
 
             SqlCommand cmd2 = new SqlCommand("UPDATE Parking SET status_ = 't' WHERE name_ = @ParkingName", connection);
 
-            cmd2.Parameters.AddWithValue("@ParkingName", );
+            //cmd2.Parameters.AddWithValue("@ParkingName", );
 
 
 
