@@ -85,7 +85,24 @@ namespace PMSFinal
             {
 
             }
+            SqlCommand cmd3 = new SqlCommand("INSERT INTO Car (color,license_plate) VALUES (" +
+                ",@Plate)", connection);
 
+            cmd3.Parameters.AddWithValue("Color", info.Color);
+            cmd3.Parameters.AddWithValue("@Plate", info.License);
+            try
+            {
+
+                cmd2.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+
+            }
 
 
         }
@@ -93,7 +110,7 @@ namespace PMSFinal
 
         public DataTable DataBasetoComboBox()
         {
-            SqlCommand cmd = new SqlCommand("SELECT id,name_ FROM Parking", connection);
+            SqlCommand cmd = new SqlCommand("SELECT id,name_ FROM Parking WHERE status_ = 'f'", connection);
             SqlDataAdapter adpt = new SqlDataAdapter(cmd);
             DataTable table = new DataTable();
             adpt.Fill(table);
@@ -101,14 +118,14 @@ namespace PMSFinal
             return table;
         }
 
-        public void UpdateParkingStatus()
+        public void UpdateParkingStatus(string name)
         {
 
 
 
             SqlCommand cmd2 = new SqlCommand("UPDATE Parking SET status_ = 't' WHERE name_ = @ParkingName", connection);
 
-            cmd2.Parameters.AddWithValue("@ParkingName", ParkingNames.SelectedText);
+            cmd2.Parameters.AddWithValue("@ParkingName", );
 
 
 

@@ -28,16 +28,6 @@ namespace PMS_Final
 
 
 
-
-
-
-
-
-
-
-
-
-
         private void ButtonCloseForm_Click(object sender, EventArgs e)
         {
             Register reg = new Register();
@@ -59,7 +49,7 @@ namespace PMS_Final
         }
 
 
-
+      
         private void Chooser_Load(object sender, EventArgs e)
         {
 
@@ -72,8 +62,12 @@ namespace PMS_Final
             ParkingNames.ValueMember = "id";
             dm.Dispose();
 
+           
 
         }
+
+        
+       
 
         private void addButton_Click_1(object sender, EventArgs e)
         {
