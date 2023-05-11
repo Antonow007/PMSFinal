@@ -81,7 +81,7 @@ namespace PMSFinal
             }
             
             SqlCommand cmd3 = new SqlCommand("INSERT INTO Car (id_customer,license_plate,brand,color) VALUES (" +
-                "(SELECT id FROM customer WHERE name_=@Name AND phone=@Phone AND email=@Email)," +
+                "(SELECT id FROM Customer WHERE name_=@Name AND phone=@Phone AND email=@Email)," +
                 "@Plate,(SELECT id FROM Car_Type WHERE brand_name=@Brand AND model_name=@Model),@Color)", connection);
             cmd3.Parameters.AddWithValue("@Name", info.Name);
             cmd3.Parameters.AddWithValue("@Phone", info.Phone);
@@ -100,8 +100,27 @@ namespace PMSFinal
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-            
 
+            SqlCommand cmd4 = new SqlCommand("INSERT INTO Reservation (parking_id,car_id,reservation_start,reservation_end) VALUES (" +
+                "(SELECT id FROM Parking WHERE name_=@Name AND phone=@Phone AND email=@Email)," +
+                "@Plate,(SELECT id FROM Car_Type WHERE brand_name=@Brand AND model_name=@Model),@Color)", connection);
+            cmd3.Parameters.AddWithValue("@Name", info.Name);
+            cmd3.Parameters.AddWithValue("@Phone", info.Phone);
+            cmd3.Parameters.AddWithValue("@Email", info.Email);
+            cmd3.Parameters.AddWithValue("@Plate", info.License);
+            cmd3.Parameters.AddWithValue("@Brand", info.Brand);
+            cmd3.Parameters.AddWithValue("@Model", info.Model);
+            cmd3.Parameters.AddWithValue("@Color", info.Color);
+
+            try
+            {
+
+                cmd3.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
 
         }
 
