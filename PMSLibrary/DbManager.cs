@@ -64,10 +64,6 @@ namespace PMSFinal
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-            finally
-            {
-
-            }
 
             SqlCommand cmd2 = new SqlCommand("INSERT INTO Customer (name_,phone,email) VALUES (@Name,@Phone,@Email)", connection);
 
@@ -83,10 +79,7 @@ namespace PMSFinal
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-            finally
-            {
-
-            }
+            
             SqlCommand cmd3 = new SqlCommand("INSERT INTO Car (id_customer,license_plate,brand,color) VALUES (" +
                 "(SELECT id FROM customer WHERE name_=@Name AND phone=@Phone AND email=@Email)," +
                 "@Plate,(SELECT id FROM Car_Type WHERE brand_name=@Brand AND model_name=@Model),@Color)", connection);
@@ -107,10 +100,7 @@ namespace PMSFinal
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-            finally
-            {
-
-            }
+            
 
 
         }
@@ -143,10 +133,6 @@ namespace PMSFinal
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-
             }
 
         }

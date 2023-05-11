@@ -6,6 +6,7 @@
         Car car = new Car();
         CarType carType = new CarType();
         Customer customer = new Customer();
+        Parking parking = new Parking();
 
         public CarInfo()
         {
@@ -19,5 +20,7 @@
         public string Name { get => customer.Name; set => customer.Name = value; }
         public string Phone { get => customer.Phone; set => customer.Phone = value; }
         public string Email { get => customer.Email; set => customer.Email = value; }
+        public string Reservation_Start { get => parking.Reservation_start; set => parking.Reservation_start = value; }
+        public string Reservation_End { get => parking.Reservation_end; set => parking.Reservation_end = value;}
     }
 }

@@ -113,6 +113,7 @@ namespace PMS_Final
             info.Name = nameTextBox.Text;
             info.Phone = phoneTextBox.Text;
             info.Email = emailTextBox.Text;
+           
             Chooser chooser = new Chooser(info);
 
             chooser.Show();

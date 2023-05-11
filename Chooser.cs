@@ -15,6 +15,9 @@ namespace PMS_Final
 
 
         CarInfo info = new CarInfo();
+        
+
+
 
         public Chooser(CarInfo ci)
         {
@@ -54,6 +57,11 @@ namespace PMS_Final
       
         private void Chooser_Load(object sender, EventArgs e)
         {
+            CarInfo info = new CarInfo();         
+            info.Reservation_Start = Startdate.Text;
+            info.Reservation_End = Enddate.Text;
+
+
 
             DbManager dm = new DbManager();
             DataTable table = dm.DataBasetoComboBox();
