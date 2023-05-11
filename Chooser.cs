@@ -2,7 +2,9 @@
 using PMSFinal;
 using PMSLibrary;
 using System;
+using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace PMS_Final
@@ -65,16 +67,27 @@ namespace PMS_Final
            
 
         }
+        public string GetSelectedParkingName()
+        {
+            return ParkingNames.SelectedText;
+        }
 
-        
-       
+
 
         private void addButton_Click_1(object sender, EventArgs e)
         {
             DbManager dm = new DbManager();
             dm.IsertIntoDatabase(info);
-
+            dm.UpdateParkingStatus(ParkingNames.Text);
             dm.Dispose();
+
+          
+
+        }
+
+        private void Chooser_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

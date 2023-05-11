@@ -7,6 +7,7 @@ using System.Windows.Forms;
 namespace PMSFinal
 {
     public class DbManager
+
     {
 
         private static DbManager instance = null;
@@ -56,7 +57,7 @@ namespace PMSFinal
             try
             {
 
-                
+
                 cmd1.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -95,8 +96,8 @@ namespace PMSFinal
             cmd3.Parameters.AddWithValue("@Plate", info.License);
             cmd3.Parameters.AddWithValue("@Brand", info.Brand);
             cmd3.Parameters.AddWithValue("@Model", info.Model);
-            cmd3.Parameters.AddWithValue("Color", info.Color);
-            
+            cmd3.Parameters.AddWithValue("@Color", info.Color);
+
             try
             {
 
@@ -125,26 +126,30 @@ namespace PMSFinal
             return table;
         }
 
-        public void UpdateParkingStatus()
+
+
+
+        public void UpdateParkingStatus(string parkingNames)
         {
 
-
-
             SqlCommand cmd2 = new SqlCommand("UPDATE Parking SET status_ = 't' WHERE name_ = @ParkingName", connection);
+            SqlDataAdapter adpt = new SqlDataAdapter(cmd2);
+            cmd2.Parameters.AddWithValue("@ParkingName", parkingNames);
+            try
+            {
 
-            //cmd2.Parameters.AddWithValue("@ParkingName", );
+                cmd2.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
 
-
-
-
+            }
 
         }
-
-
-
-
-
-
 
     }
 }

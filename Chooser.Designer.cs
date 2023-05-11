@@ -310,6 +310,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Parking Management System";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Chooser_FormClosing);
             this.Load += new System.EventHandler(this.Chooser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ParkingNames)).EndInit();
             this.ResumeLayout(false);

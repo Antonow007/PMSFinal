@@ -108,8 +108,8 @@ namespace PMS_Final
             CarInfo info = new CarInfo();
             info.License = plateTextBox.Text;
             info.Brand = brandTextBox.Text;
-            info.Model = brandTextBox.Text;
-            info.Color = brandTextBox.Text;
+            info.Model = modelTextBox.Text;
+            info.Color = colorTextBox.Text;
             info.Name = nameTextBox.Text;
             info.Phone = phoneTextBox.Text;
             info.Email = emailTextBox.Text;
@@ -120,22 +120,9 @@ namespace PMS_Final
             this.Hide();
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        private void Register_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
