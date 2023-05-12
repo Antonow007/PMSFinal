@@ -47,7 +47,7 @@ namespace PMSFinal
 
 
 
-        public void IsertIntoDatabase(CarInfo info)
+        public void IsertIntoDatabase(CarInfo info,int parkID)
         {
 
             SqlCommand cmd1 = new SqlCommand("INSERT INTO Car_Type (brand_name,model_name) VALUES (@Brand,@Model)", connection);
@@ -68,7 +68,7 @@ namespace PMSFinal
             SqlCommand cmd2 = new SqlCommand("INSERT INTO Customer (name_,phone,email) VALUES (@Name,@Phone,@Email)", connection);
 
             cmd2.Parameters.AddWithValue("@Name", info.Name);
-            cmd2.Parameters.AddWithValue("@Phone", info.Phone);
+                cmd2.Parameters.AddWithValue("@Phone", info.Phone);
             cmd2.Parameters.AddWithValue("@Email", info.Email);
             try
             {
@@ -101,21 +101,22 @@ namespace PMSFinal
                 MessageBox.Show("Error: " + ex.Message);
             }
 
-            SqlCommand cmd4 = new SqlCommand("INSERT INTO Reservation (parking_id,car_id,reservation_start,reservation_end) VALUES (" +
-                "(SELECT id FROM Parking WHERE name_=@Name AND phone=@Phone AND email=@Email)," +
-                "@Plate,(SELECT id FROM Car_Type WHERE brand_name=@Brand AND model_name=@Model),@Color)", connection);
-            cmd3.Parameters.AddWithValue("@Name", info.Name);
-            cmd3.Parameters.AddWithValue("@Phone", info.Phone);
-            cmd3.Parameters.AddWithValue("@Email", info.Email);
-            cmd3.Parameters.AddWithValue("@Plate", info.License);
-            cmd3.Parameters.AddWithValue("@Brand", info.Brand);
-            cmd3.Parameters.AddWithValue("@Model", info.Model);
-            cmd3.Parameters.AddWithValue("@Color", info.Color);
+                SqlCommand cmd4 = new SqlCommand("INSERT INTO Reservation (parking_id,car_id,reservation_start,reservation_end) VALUES (" +
+                "@pid," +
+                "(SELECT Car.id FROM Car JOIN Car_Type ON Car.brand=Car_Type.id WHERE Car.license_plate=@Plate AND Car_Type.brand_name=@Brand AND Car_Type.model_name=@Model AND Car.color=@Color)" +
+                ",@reservation_start,@reservation_end)", connection);
+            cmd4.Parameters.AddWithValue("@pid", parkID);
+            cmd4.Parameters.AddWithValue("@Plate", info.License);
+            cmd4.Parameters.AddWithValue("@Brand", info.Brand);
+            cmd4.Parameters.AddWithValue("@Model", info.Model);
+            cmd4.Parameters.AddWithValue("@Color", info.Color);
+            cmd4.Parameters.AddWithValue("@reservation_start", info.Reservation_Start);
+            cmd4.Parameters.AddWithValue("@reservation_end", info.Reservation_End);
 
             try
             {
 
-                cmd3.ExecuteNonQuery();
+                cmd4.ExecuteNonQuery();
             }
             catch (Exception ex)
             {

@@ -84,8 +84,13 @@ namespace PMS_Final
 
         private void addButton_Click_1(object sender, EventArgs e)
         {
+
+            CarInfo info = new CarInfo();
+            info.Reservation_Start = Startdate.Text;
+            info.Reservation_End = Enddate.Text;
+
             DbManager dm = new DbManager();
-            dm.IsertIntoDatabase(info);
+            dm.IsertIntoDatabase(info,int.Parse(ParkingNames.SelectedValue.ToString()));
             dm.UpdateParkingStatus(ParkingNames.Text);
             dm.Dispose();
 
