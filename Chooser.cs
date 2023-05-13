@@ -89,7 +89,11 @@ namespace PMS_Final
             dm.UpdateParkingStatus(ParkingNames.Text);
             dm.Dispose();
 
-          
+            Main main = new Main();
+            main.Show();
+            this.WindowState = FormWindowState.Minimized;
+            this.Hide();
+
 
         }
 

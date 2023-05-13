@@ -45,8 +45,12 @@ namespace PMS_Final
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            CustomMessageBox.Show("Comming Soon!", "Message");
-            return;
+
+            Search search = new Search();
+            search.Show();
+
+            this.WindowState = FormWindowState.Minimized;
+            this.Hide();
         }
     }
 }
