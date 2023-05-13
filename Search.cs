@@ -17,10 +17,13 @@ namespace PMS_Final
 
 
 
+        private void Chooser_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
 
 
 
-        
         private void Register_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();

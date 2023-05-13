@@ -86,6 +86,7 @@
     <Compile Include="CustomMessageBox.Designer.cs">
       <DependentUpon>CustomMessageBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Resources.Designer.cs" />
     <Compile Include="Search.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,14 +118,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="ParkingDiagram.cd" />
     <None Include="Properties\Settings.settings">
@@ -181,6 +176,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Parking.mdf</DependentUpon>
     </Content>
+    <Content Include="Resources\depositphotos_567328780-stock-illustration-car-parking-line-icon_auto_x2_colored_toned_light_ai.jpg" />
     <None Include="Resources\istockphoto-1127160403-612x612.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

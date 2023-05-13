@@ -15,7 +15,10 @@ namespace PMS_Final
 
 
 
-
+        private void Chooser_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
         public Main()
         {
             InitializeComponent();
