@@ -57,11 +57,9 @@ namespace PMS_Final
       
         private void Chooser_Load(object sender, EventArgs e)
         {
-            CarInfo info = new CarInfo();         
-            info.Reservation_Start = Startdate.Text;
-            info.Reservation_End = Enddate.Text;
 
-
+            
+            
 
             DbManager dm = new DbManager();
             DataTable table = dm.DataBasetoComboBox();
@@ -85,10 +83,7 @@ namespace PMS_Final
         private void addButton_Click_1(object sender, EventArgs e)
         {
 
-            CarInfo info = new CarInfo();
-            info.Reservation_Start = Startdate.Text;
-            info.Reservation_End = Enddate.Text;
-
+                  
             DbManager dm = new DbManager();
             dm.IsertIntoDatabase(info,int.Parse(ParkingNames.SelectedValue.ToString()));
             dm.UpdateParkingStatus(ParkingNames.Text);
@@ -101,6 +96,17 @@ namespace PMS_Final
         private void Chooser_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Startdate_TextChanged(object sender, EventArgs e)
+        {
+
+            info.Reservation_Start = Startdate.Text;
+        }
+
+        private void Enddate_TextChanged(object sender, EventArgs e)
+        {
+            info.Reservation_End = Enddate.Text;
         }
     }
 }

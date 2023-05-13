@@ -119,6 +119,7 @@
             this.Startdate.StateCommon.Content.Font = new System.Drawing.Font("Dubai Medium", 11F);
             this.Startdate.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.Startdate.TabIndex = 10;
+            this.Startdate.TextChanged += new System.EventHandler(this.Startdate_TextChanged);
             // 
             // kryptonLabel4
             // 
@@ -147,6 +148,7 @@
             this.Enddate.StateCommon.Content.Font = new System.Drawing.Font("Dubai Medium", 11F);
             this.Enddate.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.Enddate.TabIndex = 12;
+            this.Enddate.TextChanged += new System.EventHandler(this.Enddate_TextChanged);
             // 
             // kryptonLabel5
             // 
