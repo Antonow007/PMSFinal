@@ -36,5 +36,17 @@ namespace PMS_Final
             this.WindowState = FormWindowState.Minimized;
             this.Hide();
         }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            CustomMessageBox.Show("Comming Soon!","Message");
+            return;
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            CustomMessageBox.Show("Comming Soon!", "Message");
+            return;
+        }
     }
 }
