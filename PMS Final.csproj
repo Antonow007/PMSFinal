@@ -181,7 +181,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Parking.mdf</DependentUpon>
     </Content>
-    <None Include="Resources\depositphotos_567328780-stock-illustration-car-parking-line-icon_auto_x2_colored_toned_light_ai.jpg" />
     <None Include="Resources\istockphoto-1127160403-612x612.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
