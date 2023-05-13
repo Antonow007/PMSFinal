@@ -29,9 +29,10 @@ namespace PMS_Final
         }
         private void addButton_Click(object sender, EventArgs e)
         {
-            Register register = new Register();
 
+            Register register = new Register();
             register.Show();
+
             this.WindowState = FormWindowState.Minimized;
             this.Hide();
         }
