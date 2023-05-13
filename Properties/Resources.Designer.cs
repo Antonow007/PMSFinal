@@ -93,6 +93,27 @@ namespace PMS_Final.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap depositphotos_567328780_stock_illustration_car_parking_line_icon_auto_x2_colored_toned_light_ai {
+            get {
+                object obj = ResourceManager.GetObject("depositphotos_567328780-stock-illustration-car-parking-line-icon_auto_x2_colored_" +
+                        "toned_light_ai", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_1127160403_612x612 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-1127160403-612x612", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Transparent_Button {
             get {
                 object obj = ResourceManager.GetObject("Transparent Button", resourceCulture);

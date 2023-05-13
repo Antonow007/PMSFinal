@@ -42,7 +42,9 @@
             this.ParkingNames = new Krypton.Toolkit.KryptonComboBox();
             this.dateFormat = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ParkingNames)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPalette1
@@ -290,12 +292,23 @@
             this.kryptonLabel2.TabIndex = 19;
             this.kryptonLabel2.Values.Text = " YYYY-MM-DD HH:MI";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PMS_Final.Properties.Resources.istockphoto_1127160403_612x612;
+            this.pictureBox1.Location = new System.Drawing.Point(377, 91);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(429, 266);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
             // Chooser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(832, 453);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.kryptonLabel2);
             this.Controls.Add(this.dateFormat);
             this.Controls.Add(this.ParkingNames);
@@ -315,6 +328,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Chooser_FormClosing);
             this.Load += new System.EventHandler(this.Chooser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ParkingNames)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,6 +348,7 @@
         private Krypton.Toolkit.KryptonComboBox ParkingNames;
         private Krypton.Toolkit.KryptonLabel dateFormat;
         private Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
