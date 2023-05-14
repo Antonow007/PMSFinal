@@ -49,8 +49,8 @@ namespace PMS_Final
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
 
-            Search search = new Search();
-            search.Show();
+            Finder finder = new Finder();
+            finder.Show();
 
             this.WindowState = FormWindowState.Minimized;
             this.Hide();

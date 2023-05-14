@@ -86,12 +86,16 @@
     <Compile Include="CustomMessageBox.Designer.cs">
       <DependentUpon>CustomMessageBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Resources.Designer.cs" />
-    <Compile Include="Search.cs">
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Finder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Search.Designer.cs">
-      <DependentUpon>Search.cs</DependentUpon>
+    <Compile Include="Finder.Designer.cs">
+      <DependentUpon>Finder.cs</DependentUpon>
     </Compile>
     <Compile Include="Register.cs">
       <SubType>Form</SubType>
@@ -110,8 +114,8 @@
     <EmbeddedResource Include="CustomMessageBox.resx">
       <DependentUpon>CustomMessageBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Search.resx">
-      <DependentUpon>Search.cs</DependentUpon>
+    <EmbeddedResource Include="Finder.resx">
+      <DependentUpon>Finder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
@@ -119,6 +123,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="ParkingDiagram.cd" />
@@ -176,6 +181,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Parking.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Lupa 3.png" />
+    <None Include="Resources\Lupa 2.png" />
+    <None Include="Resources\Lupa.png" />
+    <None Include="Resources\clipart85921.png" />
     <Content Include="Resources\depositphotos_567328780-stock-illustration-car-parking-line-icon_auto_x2_colored_toned_light_ai.jpg" />
     <None Include="Resources\istockphoto-1127160403-612x612.jpg" />
   </ItemGroup>

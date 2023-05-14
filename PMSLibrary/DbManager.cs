@@ -47,7 +47,7 @@ namespace PMSFinal
 
 
 
-        public void IsertIntoDatabase(CarInfo info,int parkID)
+        public void IsertIntoDatabase(CarInfo info, int parkID)
         {
 
             SqlCommand cmd1 = new SqlCommand("INSERT INTO Car_Type (brand_name,model_name) VALUES (@Brand,@Model)", connection);
@@ -68,7 +68,7 @@ namespace PMSFinal
             SqlCommand cmd2 = new SqlCommand("INSERT INTO Customer (name_,phone,email) VALUES (@Name,@Phone,@Email)", connection);
 
             cmd2.Parameters.AddWithValue("@Name", info.Name);
-                cmd2.Parameters.AddWithValue("@Phone", info.Phone);
+            cmd2.Parameters.AddWithValue("@Phone", info.Phone);
             cmd2.Parameters.AddWithValue("@Email", info.Email);
             try
             {
@@ -79,7 +79,7 @@ namespace PMSFinal
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-            
+
             SqlCommand cmd3 = new SqlCommand("INSERT INTO Car (id_customer,license_plate,brand,color) VALUES (" +
                 "(SELECT id FROM Customer WHERE name_=@Name AND phone=@Phone AND email=@Email)," +
                 "@Plate,(SELECT id FROM Car_Type WHERE brand_name=@Brand AND model_name=@Model),@Color)", connection);
@@ -101,10 +101,10 @@ namespace PMSFinal
                 MessageBox.Show("Error: " + ex.Message);
             }
 
-                SqlCommand cmd4 = new SqlCommand("INSERT INTO Reservation (parking_id,car_id,reservation_start,reservation_end) VALUES (" +
-                "@pid," +
-                "(SELECT Car.id FROM Car JOIN Car_Type ON Car.brand=Car_Type.id WHERE Car.license_plate=@Plate AND Car_Type.brand_name=@Brand AND Car_Type.model_name=@Model AND Car.color=@Color)" +
-                ",@reservation_start,@reservation_end)", connection);
+            SqlCommand cmd4 = new SqlCommand("INSERT INTO Reservation (parking_id,car_id,reservation_start,reservation_end) VALUES (" +
+            "@pid," +
+            "(SELECT Car.id FROM Car JOIN Car_Type ON Car.brand=Car_Type.id WHERE Car.license_plate=@Plate AND Car_Type.brand_name=@Brand AND Car_Type.model_name=@Model AND Car.color=@Color)" +
+            ",@reservation_start,@reservation_end)", connection);
             cmd4.Parameters.AddWithValue("@pid", parkID);
             cmd4.Parameters.AddWithValue("@Plate", info.License);
             cmd4.Parameters.AddWithValue("@Brand", info.Brand);
@@ -114,7 +114,7 @@ namespace PMSFinal
             cmd4.Parameters.AddWithValue("@reservation_end", info.Reservation_End);
 
             try
-                {
+            {
 
                 cmd4.ExecuteNonQuery();
             }
@@ -157,5 +157,59 @@ namespace PMSFinal
 
         }
 
+
+
+
+
+        public void SelectDatas(string SearchText, out SelectData selectedData)
+        {
+            selectedData = null;
+            SqlCommand cmd5 = new SqlCommand("SELECT c.name_, ct.brand_name, ct.model_name, p.name_, r.reservation_end" +
+                "FROM Car AS car" +
+                "JOIN Customer AS c ON c.id = car.id_customer" +
+                "JOIN Car_Type AS ct ON ct.id = car.brand" +
+                "JOIN Reservation AS r ON r.car_id = car.id" +
+                "JOIN Parking AS p ON p.id = r.parking_id" +
+                "WHERE car.license_plate = @ParkingName;", connection);
+            SqlDataAdapter adpt = new SqlDataAdapter(cmd5);
+            cmd5.Parameters.AddWithValue("@ParkingName", SearchText);
+            using (SqlDataReader reader = cmd5.ExecuteReader())
+            {
+                // Read the selected values and create a SelectedData object
+                if (reader.Read())
+                {
+
+
+                    selectedData = new SelectData();
+                    selectedData.CustomerName = reader.GetString(0);
+                    selectedData.BrandName = reader.GetString(1);
+                    selectedData.ModelName = reader.GetString(2);
+                    selectedData.ParkingName = reader.GetString(3);
+                    selectedData.ReservationEnd = reader.GetString(4);
+                    
+
+                }              
+                try
+                {
+
+                    cmd5.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
+
+
+
+
+
+
+
+
+
+            }
+
+        }
     }
 }
