@@ -67,6 +67,9 @@ namespace PMS_Final
 
         }
 
-        
+        private void Finder_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

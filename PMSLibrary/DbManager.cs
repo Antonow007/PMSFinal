@@ -3,6 +3,7 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace PMSFinal
 {
@@ -164,18 +165,19 @@ namespace PMSFinal
         public void SelectDatas(string SearchText, out SelectData selectedData)
         {
             selectedData = null;
-            SqlCommand cmd5 = new SqlCommand("SELECT c.name_, ct.brand_name, ct.model_name, p.name_, r.reservation_end" +
-                "FROM Car AS car" +
-                "JOIN Customer AS c ON c.id = car.id_customer" +
-                "JOIN Car_Type AS ct ON ct.id = car.brand" +
-                "JOIN Reservation AS r ON r.car_id = car.id" +
-                "JOIN Parking AS p ON p.id = r.parking_id" +
-                "WHERE car.license_plate = @ParkingName;", connection);
+           
+            SqlCommand cmd5 = new SqlCommand("SELECT Customer.name_, Car_Type.brand_name, Car_Type.model_name, Parking.name_, Reservation.reservation_end " +
+                "FROM Car" +
+                " JOIN Customer ON Customer.id = Car.id_customer " +
+                "JOIN Car_Type  ON Car_Type.id = Car.brand " +
+                "JOIN Reservation ON Reservation.car_id = Car.id " +
+                "JOIN Parking ON Parking.id = Reservation.parking_id " +
+                "WHERE car.license_plate = @ParkingName", connection);
             SqlDataAdapter adpt = new SqlDataAdapter(cmd5);
             cmd5.Parameters.AddWithValue("@ParkingName", SearchText);
             using (SqlDataReader reader = cmd5.ExecuteReader())
             {
-                // Read the selected values and create a SelectedData object
+                
                 if (reader.Read())
                 {
 
@@ -189,15 +191,7 @@ namespace PMSFinal
                     
 
                 }              
-                try
-                {
-
-                    cmd5.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
+               
 
 
 

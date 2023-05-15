@@ -338,6 +338,7 @@
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Text = "Parking Management System";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Register_FormClosing);
+            this.Load += new System.EventHandler(this.Finder_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
