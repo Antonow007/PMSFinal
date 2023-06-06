@@ -1,0 +1,11 @@
+﻿-- Customer table
+ALTER TABLE Customer
+ADD CONSTRAINT FK_Customer_Car
+FOREIGN KEY (id) REFERENCES Car(id_customer)
+ON DELETE CASCADE;
+
+-- Car_Type table
+ALTER TABLE Car_Type
+ADD CONSTRAINT FK_Car_Type_Car
+FOREIGN KEY (id) REFERENCES Car(brand)
+ON DELETE CASCADE;

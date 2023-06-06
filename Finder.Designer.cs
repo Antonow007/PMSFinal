@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(this.components);
-            this.nextButton = new Krypton.Toolkit.KryptonButton();
+            this.backButton = new Krypton.Toolkit.KryptonButton();
             this.SearchBox = new Krypton.Toolkit.KryptonTextBox();
             this.kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             this.NameLabel = new Krypton.Toolkit.KryptonLabel();
@@ -43,7 +43,7 @@
             this.ModelResult = new Krypton.Toolkit.KryptonLabel();
             this.LocationResult = new Krypton.Toolkit.KryptonLabel();
             this.ReservationEndResult = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonButton2 = new Krypton.Toolkit.KryptonButton();
+            this.deleteButton = new Krypton.Toolkit.KryptonButton();
             this.SuspendLayout();
             // 
             // kryptonPalette1
@@ -90,63 +90,63 @@
             this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.ButtonEdgeInset = 10;
             this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, -1, -1, -1);
             // 
-            // nextButton
+            // backButton
             // 
-            this.nextButton.CornerRoundingRadius = 20F;
-            this.nextButton.Location = new System.Drawing.Point(665, 398);
-            this.nextButton.Name = "nextButton";
-            this.nextButton.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.nextButton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.nextButton.OverrideDefault.Back.ColorAngle = 45F;
-            this.nextButton.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(147)))), ((int)(((byte)(244)))));
-            this.nextButton.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.nextButton.OverrideDefault.Border.ColorAngle = 45F;
-            this.nextButton.OverrideDefault.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.backButton.CornerRoundingRadius = 20F;
+            this.backButton.Location = new System.Drawing.Point(665, 398);
+            this.backButton.Name = "backButton";
+            this.backButton.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.backButton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.backButton.OverrideDefault.Back.ColorAngle = 45F;
+            this.backButton.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(147)))), ((int)(((byte)(244)))));
+            this.backButton.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.backButton.OverrideDefault.Border.ColorAngle = 45F;
+            this.backButton.OverrideDefault.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.nextButton.OverrideDefault.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.nextButton.OverrideDefault.Border.Rounding = 20F;
-            this.nextButton.OverrideDefault.Border.Width = 1;
-            this.nextButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.nextButton.Size = new System.Drawing.Size(155, 43);
-            this.nextButton.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.nextButton.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.nextButton.StateCommon.Back.ColorAngle = 45F;
-            this.nextButton.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.nextButton.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.nextButton.StateCommon.Border.ColorAngle = 45F;
-            this.nextButton.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.backButton.OverrideDefault.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.backButton.OverrideDefault.Border.Rounding = 20F;
+            this.backButton.OverrideDefault.Border.Width = 1;
+            this.backButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.backButton.Size = new System.Drawing.Size(155, 43);
+            this.backButton.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.backButton.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.backButton.StateCommon.Back.ColorAngle = 45F;
+            this.backButton.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.backButton.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.backButton.StateCommon.Border.ColorAngle = 45F;
+            this.backButton.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.nextButton.StateCommon.Border.Rounding = 20F;
-            this.nextButton.StateCommon.Border.Width = 1;
-            this.nextButton.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.nextButton.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.nextButton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
-            this.nextButton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.nextButton.StatePressed.Back.ColorAngle = 135F;
-            this.nextButton.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
-            this.nextButton.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.nextButton.StatePressed.Border.ColorAngle = 135F;
-            this.nextButton.StatePressed.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.backButton.StateCommon.Border.Rounding = 20F;
+            this.backButton.StateCommon.Border.Width = 1;
+            this.backButton.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.backButton.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.backButton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.backButton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.backButton.StatePressed.Back.ColorAngle = 135F;
+            this.backButton.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.backButton.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.backButton.StatePressed.Border.ColorAngle = 135F;
+            this.backButton.StatePressed.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.nextButton.StatePressed.Border.Rounding = 20F;
-            this.nextButton.StatePressed.Border.Width = 1;
-            this.nextButton.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.nextButton.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.nextButton.StateTracking.Back.ColorAngle = 45F;
-            this.nextButton.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.nextButton.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.nextButton.StateTracking.Border.ColorAngle = 45F;
-            this.nextButton.StateTracking.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.backButton.StatePressed.Border.Rounding = 20F;
+            this.backButton.StatePressed.Border.Width = 1;
+            this.backButton.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.backButton.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.backButton.StateTracking.Back.ColorAngle = 45F;
+            this.backButton.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.backButton.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.backButton.StateTracking.Border.ColorAngle = 45F;
+            this.backButton.StateTracking.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.nextButton.StateTracking.Border.Rounding = 20F;
-            this.nextButton.StateTracking.Border.Width = 1;
-            this.nextButton.TabIndex = 15;
-            this.nextButton.Values.Text = "Back";
-            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
+            this.backButton.StateTracking.Border.Rounding = 20F;
+            this.backButton.StateTracking.Border.Width = 1;
+            this.backButton.TabIndex = 15;
+            this.backButton.Values.Text = "Back";
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // SearchBox
             // 
@@ -313,64 +313,65 @@
             this.ReservationEndResult.TabIndex = 27;
             this.ReservationEndResult.Values.Text = "";
             // 
-            // kryptonButton2
+            // deleteButton
             // 
-            this.kryptonButton2.CornerRoundingRadius = 20F;
-            this.kryptonButton2.Location = new System.Drawing.Point(504, 398);
-            this.kryptonButton2.Name = "kryptonButton2";
-            this.kryptonButton2.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.kryptonButton2.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
-            this.kryptonButton2.OverrideDefault.Back.ColorAngle = 45F;
-            this.kryptonButton2.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.kryptonButton2.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
-            this.kryptonButton2.OverrideDefault.Border.ColorAngle = 45F;
-            this.kryptonButton2.OverrideDefault.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.deleteButton.CornerRoundingRadius = 20F;
+            this.deleteButton.Location = new System.Drawing.Point(504, 398);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.deleteButton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
+            this.deleteButton.OverrideDefault.Back.ColorAngle = 45F;
+            this.deleteButton.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.deleteButton.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
+            this.deleteButton.OverrideDefault.Border.ColorAngle = 45F;
+            this.deleteButton.OverrideDefault.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton2.OverrideDefault.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonButton2.OverrideDefault.Border.Rounding = 20F;
-            this.kryptonButton2.OverrideDefault.Border.Width = 1;
-            this.kryptonButton2.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton2.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton2.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.kryptonButton2.Size = new System.Drawing.Size(155, 43);
-            this.kryptonButton2.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.kryptonButton2.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
-            this.kryptonButton2.StateCommon.Back.ColorAngle = 45F;
-            this.kryptonButton2.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.kryptonButton2.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
-            this.kryptonButton2.StateCommon.Border.ColorAngle = 45F;
-            this.kryptonButton2.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.deleteButton.OverrideDefault.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.deleteButton.OverrideDefault.Border.Rounding = 20F;
+            this.deleteButton.OverrideDefault.Border.Width = 1;
+            this.deleteButton.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.deleteButton.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.deleteButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.deleteButton.Size = new System.Drawing.Size(155, 43);
+            this.deleteButton.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.deleteButton.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
+            this.deleteButton.StateCommon.Back.ColorAngle = 45F;
+            this.deleteButton.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.deleteButton.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
+            this.deleteButton.StateCommon.Border.ColorAngle = 45F;
+            this.deleteButton.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton2.StateCommon.Border.Rounding = 20F;
-            this.kryptonButton2.StateCommon.Border.Width = 1;
-            this.kryptonButton2.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton2.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton2.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.kryptonButton2.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.kryptonButton2.StatePressed.Back.ColorAngle = 135F;
-            this.kryptonButton2.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.kryptonButton2.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.kryptonButton2.StatePressed.Border.ColorAngle = 135F;
-            this.kryptonButton2.StatePressed.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.deleteButton.StateCommon.Border.Rounding = 20F;
+            this.deleteButton.StateCommon.Border.Width = 1;
+            this.deleteButton.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.deleteButton.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.deleteButton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.deleteButton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.deleteButton.StatePressed.Back.ColorAngle = 135F;
+            this.deleteButton.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.deleteButton.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.deleteButton.StatePressed.Border.ColorAngle = 135F;
+            this.deleteButton.StatePressed.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton2.StatePressed.Border.Rounding = 20F;
-            this.kryptonButton2.StatePressed.Border.Width = 1;
-            this.kryptonButton2.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
-            this.kryptonButton2.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.kryptonButton2.StateTracking.Back.ColorAngle = 45F;
-            this.kryptonButton2.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.kryptonButton2.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
-            this.kryptonButton2.StateTracking.Border.ColorAngle = 45F;
-            this.kryptonButton2.StateTracking.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.deleteButton.StatePressed.Border.Rounding = 20F;
+            this.deleteButton.StatePressed.Border.Width = 1;
+            this.deleteButton.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
+            this.deleteButton.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.deleteButton.StateTracking.Back.ColorAngle = 45F;
+            this.deleteButton.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.deleteButton.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
+            this.deleteButton.StateTracking.Border.ColorAngle = 45F;
+            this.deleteButton.StateTracking.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton2.StateTracking.Border.Rounding = 20F;
-            this.kryptonButton2.StateTracking.Border.Width = 1;
-            this.kryptonButton2.TabIndex = 28;
-            this.kryptonButton2.Values.Text = "Delete";
+            this.deleteButton.StateTracking.Border.Rounding = 20F;
+            this.deleteButton.StateTracking.Border.Width = 1;
+            this.deleteButton.TabIndex = 28;
+            this.deleteButton.Values.Text = "Delete";
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // Finder
             // 
@@ -378,7 +379,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(832, 453);
-            this.Controls.Add(this.kryptonButton2);
+            this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.ReservationEndResult);
             this.Controls.Add(this.LocationResult);
             this.Controls.Add(this.ModelResult);
@@ -391,7 +392,7 @@
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.SearchBox);
-            this.Controls.Add(this.nextButton);
+            this.Controls.Add(this.backButton);
             this.Name = "Finder";
             this.Palette = this.kryptonPalette1;
             this.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
@@ -415,7 +416,7 @@
         #endregion
 
         private Krypton.Toolkit.KryptonPalette kryptonPalette1;
-        private Krypton.Toolkit.KryptonButton nextButton;
+        private Krypton.Toolkit.KryptonButton backButton;
         private Krypton.Toolkit.KryptonTextBox SearchBox;
         private Krypton.Toolkit.KryptonButton kryptonButton1;
         private Krypton.Toolkit.KryptonLabel NameLabel;
@@ -428,7 +429,7 @@
         private Krypton.Toolkit.KryptonLabel ModelResult;
         private Krypton.Toolkit.KryptonLabel LocationResult;
         private Krypton.Toolkit.KryptonLabel ReservationEndResult;
-        private Krypton.Toolkit.KryptonButton kryptonButton2;
+        private Krypton.Toolkit.KryptonButton deleteButton;
     }
 }
 

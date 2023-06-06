@@ -190,20 +190,35 @@ namespace PMSFinal
                     selectedData.ReservationEnd = reader.GetString(4);
                     
 
-                }              
-               
-
-
-
-
-
-
-
-
-
+                }
 
             }
 
+
         }
+
+        public void DeleteCar(string SearchBoxText) 
+        {
+
+
+            SqlCommand cmd6 = new SqlCommand("DELETE FROM CAR WHERE license_plate = @SearchBoxText", connection);
+            SqlDataAdapter adpt = new SqlDataAdapter(cmd6);
+            cmd6.Parameters.AddWithValue("@SearchBoxText", SearchBoxText);
+            try
+            {
+
+                cmd6.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+
+        }
+
+
+
+
     }
 }

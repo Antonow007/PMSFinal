@@ -11,7 +11,7 @@ namespace PMS_Final
 
 
 
-        
+
 
 
 
@@ -40,7 +40,7 @@ namespace PMS_Final
             Application.Exit();
         }
 
-        private void nextButton_Click(object sender, EventArgs e)
+        private void backButton_Click(object sender, EventArgs e)
         {
             Main main = new Main();
             main.Show();
@@ -70,6 +70,13 @@ namespace PMS_Final
         private void Finder_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            DbManager dm = new DbManager();
+            dm.DeleteCar(SearchBox.Text);
+            dm.Dispose();
         }
     }
 }
